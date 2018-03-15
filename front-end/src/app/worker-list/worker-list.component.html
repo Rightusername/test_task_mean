@@ -1,0 +1,30 @@
+
+<mat-card class="section">
+  <button mat-raised-button color="primary" (click)="openDialogToAdd()">Add worker</button>
+</mat-card>
+
+<p class="section">
+  Here is a workers list
+</p>
+<mat-card class="section">
+  <mat-grid-list cols="6" rowHeight="50px">
+    <mat-grid-tile><b>Name</b></mat-grid-tile>
+    <mat-grid-tile><b>Age</b></mat-grid-tile>
+    <mat-grid-tile><b>Experience</b></mat-grid-tile>
+    <mat-grid-tile><b>Salary</b></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="6" rowHeight="50px" *ngFor="let worker of this.workersService.workers">
+    <mat-grid-tile>{{worker.name}}</mat-grid-tile>
+    <mat-grid-tile>{{worker.age}}</mat-grid-tile>
+    <mat-grid-tile>{{worker.experience}}</mat-grid-tile>
+    <mat-grid-tile>{{worker.salary}}</mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="warn" (click)="this.workersService.delete(worker._id)">Delete</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="openDialogToEdit(worker)">Edit</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

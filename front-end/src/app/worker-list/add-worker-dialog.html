@@ -1,0 +1,35 @@
+<h2>
+    Worker's information
+</h2>
+
+<form class="example-form">
+    <mat-grid-list cols="2" rowHeight="65px">
+        <mat-grid-tile>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Name" [(ngModel)]="name" name="name">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Age" [(ngModel)]="age" name="age">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Experience" [(ngModel)]="experience" name="experience">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Salary" [(ngModel)]="salary" name="salary">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <button mat-raised-button color="link" class="full-width" (click)="close()">Close</button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <button mat-raised-button color="primary" class="full-width" (click)="addWorker()">OK</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</form>

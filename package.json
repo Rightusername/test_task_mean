@@ -1,0 +1,19 @@
+{
+  "name": "test_task_mean",
+  "version": "0.2.5",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.13.4",
+    "mongodb": "^2.2.35"
+  },
+  "description": "Test task MEAN stack",
+  "engines": {
+    "node": "6.9.x",
+    "npm": "3.x.x"
+  },
+  "license": "MIT"
+}
